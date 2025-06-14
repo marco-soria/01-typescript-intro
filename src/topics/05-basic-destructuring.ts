@@ -32,3 +32,7 @@ const {
 console.log("Song", anotherSong);
 console.log("Duration", duration);
 console.log("Author", author);
+
+const [, , trunks = "Not found"]: string[] = ["Goku", "Vegeta", "Trunks"];
+
+console.error("Personaje3", trunks);
