@@ -15,8 +15,32 @@ function multiply(
   return firstNumber * base;
 }
 
-const result1: number = addNumbers(5, 10);
-const result2: string = addNumbersArrow(5, 10);
-const multiplyResult: number = multiply(5);
+// const result1: number = addNumbers(5, 10);
+// const result2: string = addNumbersArrow(5, 10);
+// const multiplyResult: number = multiply(5);
 
-console.log({ result1, result2, multiplyResult });
+//console.log({ result1, result2, multiplyResult });
+
+interface Character {
+  name: string;
+  hp: number;
+  showHp: () => void;
+}
+
+const healCharacter = (character: Character, amount: number): void => {
+  character.hp += amount;
+  //console.log(`Character healed by ${amount}. New HP: ${character.hp}`);
+};
+
+const strider: Character = {
+  name: "Strider",
+  hp: 100,
+  showHp() {
+    console.log(`HP: ${this.hp}`);
+  },
+};
+
+healCharacter(strider, 10);
+healCharacter(strider, 50);
+
+strider.showHp();
